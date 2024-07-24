@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import apiClient from "../api-client";
+import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 
 export interface Platform {
@@ -12,7 +12,7 @@ export interface Game {
     id: number;
     name: string;
     background_image: string;
-    parent_platforms: {platform: Platform}[];
+    parent_platforms: { platform: Platform }[];
     metacritic: number;
 }
 
